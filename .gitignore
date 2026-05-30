@@ -1,0 +1,34 @@
+# JavaByteCodeMachine — .gitignore
+# NOTE: a "#" only starts a comment at the START of a line. Inline comments after
+# a pattern (e.g. "logs/   # ...") do NOT work — git treats the whole thing as the
+# pattern. Keep every comment on its own line.
+
+# --- Transient / generated at runtime (safe to delete; recreated on next run) ---
+logs/
+.classes/
+target/
+
+# --- Default export / save filenames ---
+trace.txt
+trace.html
+disasm.txt
+
+# --- hsdis disassembler plugins ---
+# Fetched + verified on first run by scripts/disasm.sh. Kept out of git: large,
+# arch-specific, GPL (OpenJDK-derived) binaries. See README "Fetched for you on first run".
+tools/hsdis/*.so
+
+# --- Compiled Java (we ship source only) ---
+*.class
+
+# --- Claude Code local settings (personal; shared .claude/settings.json may be committed) ---
+.claude/settings.local.json
+
+# --- OS / editor / IDE cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+*.iml
+.vscode/
