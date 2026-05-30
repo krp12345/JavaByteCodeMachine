@@ -3,6 +3,8 @@
 **A tool for studying how Java really works — your source code, the bytecode it
 compiles to, and the real machine code the JIT emits — all aligned in one view.**
 
+![JavaByteCodeMachine Screenshot](images/JavaBytecodeMachine.png)
+
 Pick any method. JavaByteCodeMachine compiles your source, JIT-compiles that method
 for the CPU architecture you choose, and lines up the three layers for you:
 
